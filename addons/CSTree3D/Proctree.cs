@@ -581,27 +581,9 @@ public class Proctree
         }
 
         // step 2: allocate more space for our new duplicate verts
-
-        var nvert = new Vector3[mVertCount + badverts];
-        for (int idx = 0; idx < mVertCount; idx++)
-        {
-            nvert[idx] = mVert[idx];
-        }
-        mVert = nvert;
-
-        var nnorm = new Vector3[mVertCount + badverts];
-        for (int idx = 0; idx < mVertCount; idx++)
-        {
-            nnorm[idx] = mNormal[idx];
-        }
-        mNormal = nnorm;
-
-        var nuv = new UV[mVertCount + badverts];
-        for (int idx = 0; idx < mVertCount; idx++)
-        {
-            nuv[idx] = mUV[idx];
-        }
-        mUV = nuv;
+        Array.Resize(ref mVert, mVertCount + badverts);
+        Array.Resize(ref mNormal, mVertCount + badverts);
+        Array.Resize(ref mUV, mVertCount + badverts);
 
         // step 3: populate duplicate verts - otherwise identical except for U=1 instead of 0
 
