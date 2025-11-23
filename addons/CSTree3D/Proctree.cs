@@ -187,10 +187,8 @@ public class Proctree
                 int v3 = aBranch.mRootRing[(i + segOffset) % segments];
                 int v4 = aBranch.mRing0[(i + 1) % segments];
 
-                Vector3I a = new Vector3I(v1, v4, v3);
-                mFace[mFaceCount++] = a;
-                a = new Vector3I(v4, v2, v3);
-                mFace[mFaceCount++] = a;
+                mFace[mFaceCount++] = new Vector3I(v1, v4, v3);
+                mFace[mFaceCount++] = new Vector3I(v4, v2, v3);
 
                 mUV[(i + segOffset) % segments] = new UV(i / (float)segments, 0);
 
