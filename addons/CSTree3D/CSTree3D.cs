@@ -425,7 +425,7 @@ public partial class CSTree3D : Node3D
             { "grow_amount", tree.mProperties.mGrowAmount },
             { "sweep_amount", tree.mProperties.mSweepAmount },
             { "max_radius", tree.mProperties.mMaxRadius },
-            { "radius_fallof_rate", tree.mProperties.mRadiusFalloffRate },
+            { "radius_falloff_rate", tree.mProperties.mRadiusFalloffRate },
             { "climb_rate", tree.mProperties.mClimbRate },
             { "kink", tree.mProperties.mTrunkKink },
             { "twist", tree.mProperties.mTwistRate },
